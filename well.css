@@ -13,7 +13,7 @@
 }
 
 :link {
-  box-shadow: 0 0 1em 1ex coral;
+  text-shadow: 0 1em 1ex coral;
 }
 
 html {
@@ -21,34 +21,50 @@ html {
   font-size: calc(1em + 1vw + 1vh);
 }
 
+code {
+  font-family: monospace;
+}
+
 body {
   box-sizing: border-box;
   display: flex;
   flex-flow: column;
-  justify-content: center;
-  align-items: center;
-  margin: 1ex 0;
-  margin-block: 1ex;
-  margin-inline: 0;
+  margin: 0;
   overflow-wrap: anywhere;
-  padding: 1em;
+  padding: 2em;
   min-height: calc(100vh - 2ex);
+}
+
+.opener {
+  display: flex;
+  flex-flow: column;
+  flex-basis: 50%;
+  align-items: center;
+  margin: auto;
+}
+
+.about {
+  flex-basis: 50%;
+  align-self: center;
+  text-align: inline-end;
 }
 
 .eye {
   display: flex;
   flex-flow: column;
-  align-items: center;
+  align-items: flex-start;
   justify-content: center;
 }
 
 .big {
-  font-size: 10ex;
+  font-size: 2em;
+  line-height: 2;
 }
 
 .pad {
   box-sizing: border-box;
-  padding: 1ex;
+  padding: 1em;
+  min-width: 4em;
 }
 
 .orb {
@@ -56,10 +72,9 @@ body {
 }
 
 @media (orientation: landscape) {
-  body {
-    border-radius: 100%;
+  .eye {
+    flex-flow: row;
     filter: hue-rotate(-90deg);
-    transform: rotate(90deg);
   }
 }
 
@@ -67,4 +82,13 @@ body {
   [class] {
     transition: none;
   }
+}
+
+.voz {
+  display: none;
+  color: transparent;
+  contain: paint;
+  font-size: 0;
+  line-height: 0;
+  margin: 0;
 }
