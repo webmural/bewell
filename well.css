@@ -1,5 +1,5 @@
 .dew-diy {
-  --dew-shift: filter 33ms;
+  --dew-shift: filter 333ms;
   --dew-solar: violet;
   --dew-lunar: indigo;
   --dew-hover: hue-rotate(-30deg);
@@ -12,17 +12,13 @@
   }
 }
 
-:link {
+:any-link {
   text-shadow: 0 1em 1ex coral;
 }
 
 html {
   font-family: sans-serif;
   font-size: calc(1em + 1vw + 1vh);
-}
-
-code {
-  font-family: monospace;
 }
 
 body {
@@ -32,7 +28,7 @@ body {
   margin: 0;
   overflow-wrap: anywhere;
   padding: 2em;
-  min-height: calc(100vh - 2ex);
+  min-height: 100vh;
 }
 
 .opener {
@@ -41,12 +37,6 @@ body {
   flex-basis: 50%;
   align-items: center;
   margin: auto;
-}
-
-.about {
-  flex-basis: 50%;
-  align-self: center;
-  text-align: inline-end;
 }
 
 .eye {
@@ -85,8 +75,6 @@ body {
 }
 
 .voz {
-  display: none;
-  color: transparent;
   contain: paint;
   font-size: 0;
   line-height: 0;
